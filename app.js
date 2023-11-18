@@ -1,3 +1,5 @@
 const {http,app}=require('./server/server')
 const ws=require('./server/ws')
 const routes=require('./server/routes/routes')
+const db=require('./server/db/myDb')
+const users=require('./server/db/usersSchema')

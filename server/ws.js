@@ -27,6 +27,7 @@ ws.on('connect',(wsConn)=>{
     // console.log(wsConn);
     wsConn.on('message',(msg)=>{
         console.log(JSON.parse(msg.utf8Data));
+        
         let incomingMsg=JSON.parse(msg.utf8Data)
         clients.forEach(client => {
             if(incomingMsg.to===client.userId) client.wsConn.send(JSON.stringify(incomingMsg))
